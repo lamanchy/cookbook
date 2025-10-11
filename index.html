@@ -1,0 +1,70 @@
+---
+layout: default
+title: Recepty
+---
+
+<h2>Recepty</h2>
+<p>Vyberte si recepty podle štítků nebo použijte vyhledávání.</p>
+
+<!-- Tag controls (auto-generated from the site data in Liquid) -->
+<div id="tag-filters" aria-label="Filtr štítků">
+  {% assign all_tags = "" | split: "" %}
+  {% assign sorted_recipes = site.recipes | sort: 'title' %}
+  {% for r in sorted_recipes %}
+    {% assign all_tags = all_tags | concat: r.tags %}
+  {% endfor %}
+  {% assign unique_tags = all_tags | uniq | sort_natural %}
+  {% for tag in unique_tags %}
+    <label class="tag-option"><input type="checkbox" class="tagbox" value="{{ tag }}"><span>{{ tag }}</span></label>
+  {% endfor %}
+</div>
+
+<label for="search" class="visually-hidden">Vyhledat recept</label>
+<input id="search" type="search" placeholder="Hledat podle názvu…" />
+
+<ul id="recipe-list">
+  {% for r in sorted_recipes %}
+  <li class="recipe"
+      data-title="{{ r.title | downcase }}"
+      data-tags="{{ r.tags | join: ' ' | downcase }}">
+    <a href="{{ r.url | relative_url }}">{{ r.title }}</a>
+    {% if r.tags and r.tags != empty %}
+    <small>— {{ r.tags | join: ', ' }}</small>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+
+<p id="empty-state" hidden>Žádné recepty neodpovídají zadaným filtrům.</p>
+
+<script>
+  const boxes = [...document.querySelectorAll('.tagbox')];
+  const search = document.getElementById('search');
+  const items  = [...document.querySelectorAll('#recipe-list .recipe')];
+  const emptyState = document.getElementById('empty-state');
+
+  function applyFilters() {
+    const q = (search.value || '').trim().toLowerCase();
+    const required = boxes.filter(b => b.checked).map(b => b.value.toLowerCase());
+
+    let visibleCount = 0;
+    items.forEach(li => {
+      const title = li.dataset.title;
+      const tags  = li.dataset.tags.split(/\s+/).filter(Boolean);
+      const matchesText = !q || title.includes(q);
+      const matchesTags = required.every(t => tags.includes(t));
+      const isVisible = matchesText && matchesTags;
+      li.hidden = !isVisible;
+      if (isVisible) {
+        visibleCount += 1;
+      }
+    });
+
+    emptyState.hidden = visibleCount !== 0;
+  }
+
+  boxes.forEach(b => b.addEventListener('change', applyFilters));
+  search.addEventListener('input', applyFilters);
+
+  applyFilters();
+</script>

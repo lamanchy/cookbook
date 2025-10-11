@@ -1,0 +1,33 @@
+# Basic site metadata
+name: Rodinná kuchařka
+title: Rodinná kuchařka
+description: Sbírka rodinných receptů připravená pro GitHub Pages.
+url: ""
+baseurl: ""
+
+permalink: pretty
+
+collections:
+  recipes:
+    output: true
+    permalink: /recipes/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: recipes
+    values:
+      layout: recipe
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+
+markdown: kramdown
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules

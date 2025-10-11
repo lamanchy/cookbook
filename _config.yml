@@ -2,8 +2,8 @@
 name: Rodinná kuchařka
 title: Rodinná kuchařka
 description: Sbírka rodinných receptů připravená pro GitHub Pages.
-url: ""
-baseurl: ""
+url: "https://lamanchy.github.io"
+baseurl: "/cookbook"
 
 permalink: pretty
 

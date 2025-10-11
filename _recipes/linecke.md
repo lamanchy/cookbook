@@ -1,9 +1,7 @@
 ---
-title: "Linecké (vhodné i do strojku)"
+title: "Linecké"
 tags:
   - vánoce
-  - cukroví
-  - klasika
 ---
 
 ## Ingredience

@@ -7,14 +7,14 @@
   --page-gradient: radial-gradient(circle at top, #f6fff8 0%, #fff2f8 45%, #ffffff 100%);
   --surface: #ffffff;
   --surface-muted: #f3faf5;
-  --accent: #ff9ecb;
-  --accent-strong: #f278b0;
-  --mint: #c8f0d0;
+  --accent: #c8f0d0;
+  --accent-strong: #6cd693;
+  --mint: #ff9ecb;
   --border: rgba(30, 30, 30, 0.08);
   --shadow: 0 1rem 2.4rem rgba(30, 30, 30, 0.08);
   --text-color: #161616;
   --muted-text: rgba(30, 30, 30, 0.6);
-  --focus-ring: 0 0 0 3px rgba(242, 120, 176, 0.45);
+  --focus-ring: 0 0 0 3px rgba(108, 214, 147, 0.45);
 }
 
 * {
@@ -28,6 +28,7 @@ body {
   color: var(--text-color);
   display: flex;
   flex-direction: column;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
 }
 
 .wrapper {
@@ -58,6 +59,7 @@ a:focus-visible {
   position: relative;
   overflow: hidden;
   color: var(--text-color);
+  border-radius: 1.5rem;
 }
 
 .site-header::after {
@@ -90,6 +92,12 @@ a:focus-visible {
   font-size: 1.05rem;
   color: var(--text-color);
   max-width: 38ch;
+}
+
+.current-page-title {
+  margin: 1.5rem 0 0;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 600;
 }
 
 .site-main {
@@ -199,7 +207,7 @@ a:focus-visible {
 #tag-filters .tag-option input[type="checkbox"]:checked + span {
   background: var(--accent);
   color: var(--text-color);
-  box-shadow: 0 0.6rem 1.2rem rgba(242, 120, 176, 0.25);
+  box-shadow: 0 0.6rem 1.2rem rgba(108, 214, 147, 0.25);
   transform: translateY(-2px);
 }
 
@@ -238,6 +246,8 @@ a:focus-visible {
   color: var(--muted-text);
 }
 
+
+
 #empty-state {
   text-align: center;
   margin-top: 3rem;
@@ -274,8 +284,8 @@ a:focus-visible {
 .tag-list li {
   padding: 0.35rem 0.85rem;
   border-radius: 999px;
-  background: linear-gradient(120deg, rgba(255, 158, 203, 0.35), rgba(200, 240, 208, 0.5));
-  border: 1px solid rgba(242, 120, 176, 0.35);
+  background: linear-gradient(120deg, rgba(200, 240, 208, 0.5), rgba(255, 158, 203, 0.35));
+  border: 1px solid rgba(108, 214, 147, 0.35);
 }
 
 .recipe-content h2,

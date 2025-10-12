@@ -9,7 +9,8 @@ title: Recepty
 <!-- Tag controls (auto-generated from the site data in Liquid) -->
 <div id="tag-filters" aria-label="Filtr štítků">
   {% assign all_tags = "" | split: "" %}
-  {% assign sorted_recipes = site.recipes | sort: 'title' %}
+  {% assign recipe_pages = site.pages | where: "dir", "/recipes/" %}
+  {% assign sorted_recipes = recipe_pages | sort: 'title' %}
   {% for r in sorted_recipes %}
     {% assign all_tags = all_tags | concat: r.tags %}
   {% endfor %}

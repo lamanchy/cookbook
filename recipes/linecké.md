@@ -17,6 +17,3 @@ tags:
 2. Těsto necháme alespoň hodinu odležet v chladu.
 3. Vyvalujeme pláty, vykrajujeme tvary a pečeme dozlatova.
 4. Cukroví můžeme slepovat marmeládou nebo zdobit dle chuti.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MDU1Nzk2Ml19
--->

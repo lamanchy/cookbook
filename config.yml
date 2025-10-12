@@ -7,15 +7,10 @@ baseurl: "/cookbook"
 
 permalink: pretty
 
-collections:
-  recipes:
-    output: true
-    permalink: /recipes/:name/
-
 defaults:
   - scope:
-      path: ""
-      type: recipes
+      path: "recipes"
+      type: pages
     values:
       layout: recipe
   - scope:

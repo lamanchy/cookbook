@@ -3,25 +3,36 @@ layout: default
 title: Recepty
 ---
 
-<h2>Recepty</h2>
-<p>Vyberte si recepty podle štítků nebo použijte vyhledávání.</p>
-
-<!-- Tag controls (auto-generated from the site data in Liquid) -->
-<div id="tag-filters" aria-label="Filtr štítků">
-  {% assign all_tags = "" | split: "" %}
-  {% assign recipe_pages = site.pages | where: "dir", "/recipes/" %}
-  {% assign sorted_recipes = recipe_pages | sort: 'title' %}
-  {% for r in sorted_recipes %}
-    {% assign all_tags = all_tags | concat: r.tags %}
-  {% endfor %}
-  {% assign unique_tags = all_tags | uniq | sort_natural %}
-  {% for tag in unique_tags %}
-    <label class="tag-option"><input type="checkbox" class="tagbox" value="{{ tag }}"><span>{{ tag }}</span></label>
-  {% endfor %}
+<div class="page-intro">
+  <h2 class="section-title">Recepty</h2>
+  <p>Vyberte si recepty podle štítků nebo použijte vyhledávání.</p>
 </div>
 
-<label for="search" class="visually-hidden">Vyhledat recept</label>
-<input id="search" type="search" placeholder="Hledat podle názvu…" />
+<!-- Tag controls (auto-generated from the site data in Liquid) -->
+<section class="controls-panel" aria-labelledby="filters-heading">
+  <div class="control-group">
+    <h2 id="filters-heading">Filtrovat podle štítků</h2>
+    <p>Zaškrtněte jeden nebo více štítků, aby zůstaly jen odpovídající recepty.</p>
+    <div id="tag-filters" aria-label="Filtr štítků">
+      {% assign all_tags = "" | split: "" %}
+      {% assign recipe_pages = site.pages | where: "dir", "/recipes/" %}
+      {% assign sorted_recipes = recipe_pages | sort: 'title' %}
+      {% for r in sorted_recipes %}
+        {% assign all_tags = all_tags | concat: r.tags %}
+      {% endfor %}
+      {% assign unique_tags = all_tags | uniq | sort_natural %}
+      {% for tag in unique_tags %}
+        <label class="tag-option"><input type="checkbox" class="tagbox" value="{{ tag }}"><span>{{ tag }}</span></label>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="control-group">
+    <h2>Vyhledávání</h2>
+    <p>Zadejte část názvu receptu a zobrazí se jen ty odpovídající.</p>
+    <label for="search" class="visually-hidden">Vyhledat recept</label>
+    <input id="search" type="search" placeholder="Hledat podle názvu…" />
+  </div>
+</section>
 
 <ul id="recipe-list">
   {% for r in sorted_recipes %}

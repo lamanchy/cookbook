@@ -15,6 +15,9 @@
         {% if site.description %}
         <p class="site-description">{{ site.description }}</p>
         {% endif %}
+        {% if page.layout == 'recipe' and page.title %}
+        <p class="current-page-title">{{ page.title }}</p>
+        {% endif %}
       </div>
     </header>
     <main class="site-main wrapper">

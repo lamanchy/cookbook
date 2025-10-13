@@ -3,13 +3,16 @@ layout: default
 ---
 <article class="recipe-detail">
   <header class="recipe-header">
-    <h1>{{ page.title }}</h1>
+    <h1>{{ page.title | escape }}</h1>
     {% if page.tags and page.tags != empty %}
-    <ul class="tag-list">
-      {% for tag in page.tags %}
-      <li>{{ tag }}</li>
-      {% endfor %}
-    </ul>
+    <div class="recipe-tags">
+      <span class="recipe-tags-label">Štítky</span>
+      <ul class="tag-list" aria-label="Štítky receptu">
+        {% for tag in page.tags %}
+        <li>{{ tag | escape }}</li>
+        {% endfor %}
+      </ul>
+    </div>
     {% endif %}
   </header>
   <div class="recipe-content">

@@ -1,0 +1,26 @@
+name: "Cookbook"
+url: "https://lamanchy.github.io"
+baseurl: "/cookbook"
+title: "Cookbook"
+description: "A pastel-hued collection of family recipes"
+permalink: pretty
+markdown: kramdown
+collections:
+  recipes:
+    output: true
+    permalink: /recipes/:name/
+    sort_by: title
+    order: ascending
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: recipes
+    values:
+      layout: recipe
+exclude:
+  - scripts
+  - README.md

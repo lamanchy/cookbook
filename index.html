@@ -1,0 +1,47 @@
+---
+layout: default
+title: Domácí kuchařka
+description: Objevte tradiční recepty podle chuti a nálady.
+---
+{% assign recipes = site.recipes | sort: 'title' %}
+{% assign all_tags = site.recipes | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
+<section class="filters" aria-label="Filtry receptů">
+  <div class="filters__search">
+    <label for="search-input">Hledat recept</label>
+    <input id="search-input" type="search" placeholder="Např. vanilka nebo rohlíček" />
+  </div>
+  {% assign filtered_tags = all_tags | reject: '' %}
+  {% if filtered_tags.size > 0 %}
+  <div class="filters__tags">
+    <p>Filtrovat podle štítků:</p>
+    <div class="tag-buttons" role="list">
+      {% for tag in filtered_tags %}
+      <button class="tag-button" type="button" data-filter-tag="{{ tag | downcase }}">{{ tag }}</button>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</section>
+<section id="recipes" class="recipe-grid" aria-live="polite">
+  {% for recipe in recipes %}
+  <article class="recipe-card"
+           data-title="{{ recipe.title | downcase }}"
+           data-tags="{{ recipe.tags | join: ',' | downcase }}"
+           data-text="{{ recipe.title | append: ' ' | append: recipe.content | strip_html | replace: '\n', ' ' | downcase | escape }}">
+    <a class="recipe-card__link" href="{{ recipe.url | relative_url }}">
+      <h2 class="recipe-card__title">{{ recipe.title }}</h2>
+      {% if recipe.excerpt %}
+      <p class="recipe-card__excerpt">{{ recipe.excerpt | strip_html | truncate: 120 }}</p>
+      {% endif %}
+      {% if recipe.tags %}
+      <ul class="tag-list">
+        {% for tag in recipe.tags %}
+        <li class="tag">{{ tag }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </a>
+  </article>
+  {% endfor %}
+</section>
+<p class="no-results" hidden>Žádné recepty neodpovídají vyhledávání. Upravte filtr a zkuste to znovu.</p>

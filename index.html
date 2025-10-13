@@ -15,7 +15,7 @@ title: Recepty
     <p>Zaškrtněte jeden nebo více štítků, aby zůstaly jen odpovídající recepty.</p>
     <div id="tag-filters" aria-label="Filtr štítků">
       {% assign all_tags = "" | split: "" %}
-      {% assign recipe_pages = site.pages | where: "dir", "/recipes/" %}
+      {% assign recipe_pages = site.pages | where_exp: "page", "page.path contains 'recipes/'" %}
       {% assign sorted_recipes = recipe_pages | sort: 'title' %}
       {% for r in sorted_recipes %}
         {% assign all_tags = all_tags | concat: r.tags %}

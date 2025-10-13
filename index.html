@@ -39,10 +39,12 @@ title: Recepty
   <li class="recipe"
       data-title="{{ r.title | downcase }}"
       data-tags="{{ r.tags | join: ' ' | downcase }}">
-    <a href="{{ r.url | relative_url }}">{{ r.title }}</a>
-    {% if r.tags and r.tags != empty %}
-    <small>— {{ r.tags | join: ', ' }}</small>
-    {% endif %}
+    <a class="recipe-link" href="{{ r.url | relative_url }}">
+      <span class="recipe-title">{{ r.title }}</span>
+      {% if r.tags and r.tags != empty %}
+      <small>— {{ r.tags | join: ', ' }}</small>
+      {% endif %}
+    </a>
   </li>
   {% endfor %}
 </ul>

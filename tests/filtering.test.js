@@ -26,6 +26,12 @@ test('filters by tags with spaces in their names', () => {
   assert.deepStrictEqual(results.map((recipe) => recipe.matches), [false, true, false]);
 });
 
+test('matches recipes that contain any of the selected tags', () => {
+  const results = filterRecipes(sampleRecipes, '', ['bez lepku', 'ořechy']);
+
+  assert.deepStrictEqual(results.map((recipe) => recipe.matches), [false, true, true]);
+});
+
 test('requires both search and tag filters to match', () => {
   const results = filterRecipes(sampleRecipes, 'linecké', ['bez lepku']);
 

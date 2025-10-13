@@ -48,7 +48,9 @@ export function filterRecipes(recipes, query, requiredTags = []) {
     const normalizedTags = parseTags(recipe.tags);
 
     const matchesText = normalizedQuery.length === 0 || normalizedTitle.includes(normalizedQuery);
-    const matchesTags = normalizedRequired.every((tag) => normalizedTags.includes(tag));
+    const matchesTags =
+      normalizedRequired.length === 0 ||
+      normalizedRequired.some((tag) => normalizedTags.includes(tag));
 
     return {
       ...recipe,

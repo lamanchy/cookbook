@@ -37,8 +37,8 @@ title: Recepty
 <ul id="recipe-list">
   {% for r in sorted_recipes %}
   <li class="recipe"
-      data-title="{{ r.title | downcase }}"
-      data-tags="{{ r.tags | join: ' ' | downcase }}">
+      data-title="{{ r.title | strip_newlines | downcase | escape }}"
+      data-tags='{{ r.tags | jsonify | escape }}'>
     <a href="{{ r.url | relative_url }}">{{ r.title }}</a>
     {% if r.tags and r.tags != empty %}
     <small>— {{ r.tags | join: ', ' }}</small>
@@ -49,34 +49,8 @@ title: Recepty
 
 <p id="empty-state" hidden>Žádné recepty neodpovídají zadaným filtrům.</p>
 
-<script>
-  const boxes = [...document.querySelectorAll('.tagbox')];
-  const search = document.getElementById('search');
-  const items  = [...document.querySelectorAll('#recipe-list .recipe')];
-  const emptyState = document.getElementById('empty-state');
+<script type="module">
+  import { setupRecipeFilters } from "{{ '/assets/js/filters.js' | relative_url }}";
 
-  function applyFilters() {
-    const q = (search.value || '').trim().toLowerCase();
-    const required = boxes.filter(b => b.checked).map(b => b.value.toLowerCase());
-
-    let visibleCount = 0;
-    items.forEach(li => {
-      const title = li.dataset.title;
-      const tags  = li.dataset.tags.split(/\s+/).filter(Boolean);
-      const matchesText = !q || title.includes(q);
-      const matchesTags = required.every(t => tags.includes(t));
-      const isVisible = matchesText && matchesTags;
-      li.hidden = !isVisible;
-      if (isVisible) {
-        visibleCount += 1;
-      }
-    });
-
-    emptyState.hidden = visibleCount !== 0;
-  }
-
-  boxes.forEach(b => b.addEventListener('change', applyFilters));
-  search.addEventListener('input', applyFilters);
-
-  applyFilters();
+  setupRecipeFilters();
 </script>

@@ -220,6 +220,10 @@ a:focus-visible {
   padding: 0;
 }
 
+.recipe[hidden] {
+  display: none !important;
+}
+
 .recipe {
   display: grid;
   gap: 0.4rem;

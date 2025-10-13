@@ -284,21 +284,6 @@ a:focus-visible {
   font-size: clamp(2rem, 5vw, 2.8rem);
 }
 
-.recipe-tags {
-  display: inline-flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  font-size: 0.95rem;
-  color: var(--muted-text);
-}
-
-.recipe-tags-label {
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
 .tag-list {
   list-style: none;
   display: flex;

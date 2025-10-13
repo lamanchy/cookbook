@@ -3,9 +3,12 @@ layout: default
 ---
 <article class="recipe-detail">
   <header class="recipe-header">
+    {% if page.title %}
+    <p class="recipe-label">Recept</p>
     <h1>{{ page.title }}</h1>
+    {% endif %}
     {% if page.tags and page.tags != empty %}
-    <ul class="tag-list">
+    <ul class="tag-list" aria-label="Štítky receptu">
       {% for tag in page.tags %}
       <li>{{ tag }}</li>
       {% endfor %}

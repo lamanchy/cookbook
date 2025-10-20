@@ -11,18 +11,21 @@ tags:
 ## ingredience
 - sójové mléko (tak aspoň litr)
 - krupička (přiměřeně)
-- cukr (stejně jako
+- cukr (stejně jako kakaa)
 - kakao
+- skořice (alternativa kakaa)
 - máslo
 
 ## postup
-- tak půl litru
-- hummus dám na chleba
-- na hummus dám nakrájený pórek
+- mléko přivedeme k varu
+- mezitím smícháme kakao a cukr 1:1
+- za stálého míchání opatrně dosypáváme krupičku
+- dokud to jde (dokud kaše není natolik hustá, že nasypanou krupičku nejde rozmíchat)
+- 
 
 # Kiki verze
 ## ingredience
 koupím citrnu, pak ji asi rok máčím, a kdo ví, co se potom stane, nějaká magie s tyčákem a... jak se to jmenuje
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNjY0Njk2Ml19
+eyJoaXN0b3J5IjpbLTE1MDU1MTI5N119
 -->

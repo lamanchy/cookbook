@@ -55,4 +55,7 @@ jobs:
 
       - name: Push optimized history
         if: steps.commit.outputs.committed == 'true'
-        run: git push --force-with-lease
+        env:
+          TARGET_REF: ${{ github.ref }}
+        run: |
+          git push --force-with-lease origin HEAD:"${TARGET_REF}"

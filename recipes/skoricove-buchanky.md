@@ -1,4 +1,5 @@
 ---
+title: "Skořicové buchánky"
 tags:
   - vánoce
   - cukroví
@@ -18,3 +19,6 @@ tags:
 2. Z těsta tvoříme malé bochánky a klademe je na plech vyložený pečicím papírem.
 3. Pečeme v mírně vyhřáté troubě dozlatova.
 4. Po vychladnutí můžeme zdobit cukrovou polevou nebo obalovat v moučkovém cukru.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE2OTg3MDQyMDRdfQ==
+-->

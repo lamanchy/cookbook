@@ -36,8 +36,7 @@ title: Recepty
 
 <ul id="recipe-list">
   {% for r in sorted_recipes %}
-      {% assign recipe_ext = '.' | append: r.ext %}
-      {% assign recipe_title = r.name | replace: recipe_ext, '' | replace: '-', ' ' | strip %}
+      {% assign recipe_title = r.name | replace: r.ext, '' | replace: '-', ' ' | strip %}
       <li class="recipe"
       data-title="{{ recipe_title | downcase }}"
       data-tags="{{ r.tags | join: ' ' | downcase }}">

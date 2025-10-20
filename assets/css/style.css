@@ -313,6 +313,16 @@ a:focus-visible {
   margin-top: 2rem;
 }
 
+.recipe-content img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  margin: 1.5rem 0;
+}
+
 .recipe-content ul,
 .recipe-content ol {
   margin-left: 1.4rem;

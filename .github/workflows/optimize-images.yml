@@ -62,4 +62,4 @@ jobs:
 
       - name: Push optimized history
         if: steps.commit.outputs.committed == 'true'
-        run: git push --force-with-lease origin HEAD:${{ github.ref }}
+        run: git push --force-with-lease origin main

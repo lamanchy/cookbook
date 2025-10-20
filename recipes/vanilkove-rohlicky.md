@@ -1,5 +1,4 @@
 ---
-title: "Vanilkové rohlíčky"
 tags:
   - vánoce
   - cukroví

@@ -1,5 +1,4 @@
 ---
-title: "Linecké"
 tags:
   - vánoce
 ---

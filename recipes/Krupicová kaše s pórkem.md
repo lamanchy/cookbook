@@ -1,5 +1,4 @@
 ---
-title: "Krupicová kaše s pórkem"
 tags:
   - sladké
   - hlavní jídlo

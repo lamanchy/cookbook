@@ -1,5 +1,4 @@
 ---
-title: "Makové rohlíčky"
 tags:
   - vánoce
   - cukroví

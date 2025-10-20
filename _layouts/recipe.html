@@ -3,10 +3,9 @@ layout: default
 ---
 <article class="recipe-detail">
   <header class="recipe-header">
-    {% if page.title %}
+    {% assign recipe_title = page.name | replace: page.ext, '' | replace: '-', ' ' | strip %}
     <p class="recipe-label">Recept</p>
-    <h1>{{ page.title }}</h1>
-    {% endif %}
+    <h1>{{ recipe_title }}</h1>
     {% if page.tags and page.tags != empty %}
     <ul class="tag-list" aria-label="Štítky receptu">
       {% for tag in page.tags %}

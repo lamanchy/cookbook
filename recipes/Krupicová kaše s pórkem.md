@@ -23,7 +23,8 @@ tags:
 - dokud to jde (dokud kaše není natolik hustá, že nasypanou krupičku nejde rozmíchat)
 - na talíř nalijeme krupici, posypeme mixem cukru a kakaa, přidáme kousky margarínu
 - FUCKING NEMÍCHAT!!!
+- možno posypat trochou jemně nakrájeného pórku (:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NzAzOTU5XX0=
+eyJoaXN0b3J5IjpbNjE0MDQ5Nzc5LDEwOTcwMzk1OV19
 -->

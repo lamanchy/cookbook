@@ -1,5 +1,4 @@
 ---
-title: "Makové rohlíčky"
 tags:
   - vánoce
   - cukroví
@@ -20,5 +19,5 @@ tags:
 2. Přidáme změklé máslo a žloutek, vypracujeme těsto a necháme odležet v chladu.
 3. Vytvarujeme rohlíčky, pečeme dozlatova a po vychladnutí obalujeme v moučkovém cukru.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3MjgxOTk5NF19
+eyJoaXN0b3J5IjpbODMzNTMzMTBdfQ==
 -->

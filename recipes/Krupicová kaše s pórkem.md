@@ -9,13 +9,14 @@ tags:
 # Blonďák verze
 
 ## ingredience
-- 
-- hummus
-- pórek
-- tahini (bonus)
+- sójové mléko
+- krupička
+- cukr
+- kakao
+- máslo
 
 ## postup
-- chleba opeču, ideálně topinkovač či toustovač
+- tak půl litru
 - hummus dám na chleba
 - na hummus dám nakrájený pórek
 
@@ -23,5 +24,5 @@ tags:
 ## ingredience
 koupím citrnu, pak ji asi rok máčím, a kdo ví, co se potom stane, nějaká magie s tyčákem a... jak se to jmenuje
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUxODE5NTczXX0=
+eyJoaXN0b3J5IjpbLTEzMjYzNDgxODFdfQ==
 -->

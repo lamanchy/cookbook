@@ -9,9 +9,9 @@ tags:
 # Blonďák verze
 
 ## ingredience
-- sójové mléko
-- krupička
-- cukr
+- sójové mléko (tak aspoň litr)
+- krupička (přiměřeně)
+- cukr (stejně jako
 - kakao
 - máslo
 
@@ -24,5 +24,5 @@ tags:
 ## ingredience
 koupím citrnu, pak ji asi rok máčím, a kdo ví, co se potom stane, nějaká magie s tyčákem a... jak se to jmenuje
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjYzNDgxODFdfQ==
+eyJoaXN0b3J5IjpbLTUzNjY0Njk2Ml19
 -->

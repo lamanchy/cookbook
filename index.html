@@ -16,7 +16,7 @@ title: Recepty
     <div id="tag-filters" aria-label="Filtr štítků">
       {% assign all_tags = "" | split: "" %}
       {% assign recipe_pages = site.pages | where_exp: "page", "page.path contains 'recipes/'" %}
-      {% assign sorted_recipes = recipe_pages | sort: 'title' %}
+      {% assign sorted_recipes = recipe_pages | sort: 'name' %}
       {% for r in sorted_recipes %}
         {% assign all_tags = all_tags | concat: r.tags %}
       {% endfor %}
@@ -36,11 +36,12 @@ title: Recepty
 
 <ul id="recipe-list">
   {% for r in sorted_recipes %}
-  <li class="recipe"
-      data-title="{{ r.title | downcase }}"
+      {% assign recipe_title = r.name | replace: r.ext, '' | replace: '-', ' ' | strip %}
+      <li class="recipe"
+      data-title="{{ recipe_title | downcase }}"
       data-tags="{{ r.tags | join: ' ' | downcase }}">
     <a class="recipe-link" href="{{ r.url | relative_url }}">
-      <span class="recipe-title">{{ r.title }}</span>
+      <span class="recipe-title">{{ recipe_title }}</span>
       {% if r.tags and r.tags != empty %}
       <small>— {{ r.tags | join: ', ' }}</small>
       {% endif %}

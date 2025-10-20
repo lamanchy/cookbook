@@ -1,5 +1,4 @@
 ---
-title: "Skořicové buchánky"
 tags:
   - vánoce
   - cukroví

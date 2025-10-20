@@ -1,5 +1,4 @@
 ---
-title: "Opečený chleba s hummusem"
 tags:
   - pomazánka
   - snídaně

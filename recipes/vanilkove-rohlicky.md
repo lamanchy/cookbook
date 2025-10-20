@@ -1,4 +1,5 @@
 ---
+title: "Vanilkové rohlíčky"
 tags:
   - vánoce
   - cukroví
@@ -17,3 +18,6 @@ tags:
 1. Z ingrediencí vypracujeme hladké těsto a necháme ho odležet v chladu.
 2. Těsto tvarujeme do rohlíčků a klademe na plech vyložený pečicím papírem.
 3. Pečeme dozlatova a ještě teplé rohlíčky obalujeme v moučkovém cukru s vanilkou.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbODk2MDQzMDM4XX0=
+-->

@@ -53,6 +53,13 @@ jobs:
             echo "No originals required history cleanup."
           fi
 
+      - name: Restore origin remote
+        if: steps.commit.outputs.committed == 'true'
+        run: |
+          if ! git remote get-url origin >/dev/null 2>&1; then
+            git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          fi
+
       - name: Push optimized history
         if: steps.commit.outputs.committed == 'true'
-        run: git push --force-with-lease
+        run: git push --force-with-lease origin HEAD:${{ github.ref }}
